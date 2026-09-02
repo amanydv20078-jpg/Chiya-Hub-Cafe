@@ -1,0 +1,6 @@
+{
+  "name": "Chiya Hub",
+  "description": "Artisanal café experience with authentic Himalayan Chiya, specialty coffee, and handcrafted bites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

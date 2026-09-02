@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-primary: #271310;
+  --color-primary-container: #3e2723;
+  --color-on-primary-container: #ae8d87;
+  --color-secondary: #655d4f;
+  --color-secondary-container: #eadecc;
+  --color-secondary-fixed: #ede1cf;
+  --color-surface: #fcf9f8;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container: #f0eded;
+  --color-surface-container-high: #eae7e7;
+  --color-surface-container-highest: #e5e2e1;
+  --color-on-surface: #1b1c1c;
+  --color-on-surface-variant: #504442;
+  --color-outline: #827472;
+  --color-outline-variant: #d3c3c0;
+  --color-accent: #c86d3b;
+  --color-accent-hover: #b85d28;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #fcf9f8;
+  color: #1b1c1c;
+}
+
+.font-serif {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-sans {
+  font-family: "Montserrat", system-ui, sans-serif;
+}
+
+/* Glassmorphism */
+.glass-nav {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(252, 249, 248, 0.85);
+}
+
+/* Overlay gradient for Hero */
+.hero-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(39, 19, 16, 0.85) 0%,
+    rgba(39, 19, 16, 0.4) 50%,
+    rgba(39, 19, 16, 0.7) 100%
+  );
+}
+
+/* Steam rise effect */
+@keyframes steamPulse {
+  0% { transform: translateY(0) scale(1); opacity: 0.2; }
+  50% { transform: translateY(-8px) scale(1.05); opacity: 0.5; }
+  100% { transform: translateY(0) scale(1); opacity: 0.2; }
+}
+
+.animate-steam {
+  animation: steamPulse 4s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0eded;
+}
+::-webkit-scrollbar-thumb {
+  background: #ae8d87;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #271310;
+}
